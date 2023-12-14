@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Alice's Adventures in Wonderland</title>
+    <style>
+      body {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/693/original/css-pattern-by-magicpattern_%284%29.png?1701562758");
+        background-repeat: repeat;
+      }
+      a {
+        font-weight: 1000;
+        color: #ab336a;
+      }
+      .dark a {
+        color: #72acf7;
+      }
+      .dark {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/698/original/css-pattern-by-magicpattern_%288%29.png?1701563810");
+        background-repeat: repeat;
+      }
+      .container {
+        display: block;
+        margin: 0 auto;
+        max-width: 800px;
+        font-family: "Libre Baskerville", serif;
+        text-align: center;
+        margin-top: 50px;
+        color: #222259;
+      }
+      .dark .container {
+        color: #f5eff1;
+      }
+      .rabbit {
+        font-size: 50px;
+        text-align: center;
+        padding: 20px;
+      }
+      .theme-button {
+        display: block;
+        margin: 0 auto;
+        background-color: rgb(229 232 241);
+        color: #e1f7f8;
+        font-size: 30px;
+        padding: 10px;
+        border-radius: 30px;
+        border: none;
+        box-shadow: inset -6px -7px 60px 5px rgba(27, 1, 1, 0.7);
+      }
+      .theme-button:hover {
+        cursor: pointer;
+        background: rgb(2 0 0 / 70%);
+      }
+
+      header {
+        border-radius: 20px;
+        padding: 5px 5px 30px 5px;
+        margin: 20px;
+        background-color: aliceblue;
+        box-shadow: 0 0 20px rgb(59 2 2 / 20%);
+      }
+      .dark header {
+        background-color: rgb(97 10 26 / 35%);
+        box-shadow: 0 0 20px rgba(26, 1, 1, 0.2);
+      }
+      h1 {
+        font-size: 35px;
+      }
+      .cheshire-cat {
+        display: block;
+        margin: -30px auto;
+        opacity: 1;
+        transition: all 2000ms ease-in-out;
+        width: 300px;
+      }
+      .cheshire-cat:hover {
+        opacity: 0;
+        cursor: pointer;
+      }
+      .dark .cheshire-cat {
+        filter: invert(100%);
+      }
+      section {
+        box-shadow: 0 0 20px rgb(59 2 2 / 20%);
+        padding: 13px;
+        border-radius: 15px;
+        margin: 20px;
+        background-color: aliceblue;
+      }
+      .dark section {
+        background-color: rgb(97 10 26 / 35%);
+      }
+      p {
+        line-height: 2;
+        font-size: 15px;
+      }
+
+      .grid {
+        margin: 40px auto;
+        display: grid;
+        width: 750px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 60px;
+      }
+      .dark .grid {
+        filter: invert(100%);
+      }
+      .dark .grid img {
+        background-color: rgb(97 10 26 / 5%);
+      }
+      .grid img {
+        width: 100%;
+        border-radius: 20px;
+      }
+      .white-rabbit {
+        background-color: aliceblue;
+        box-shadow: 5px 5px 10px rgb(59 2 2 / 20%);
+      }
+      .drink-me {
+        background-color: aliceblue;
+        box-shadow: 5px 5px 10px rgb(59 2 2 / 20%);
+      }
+      .cardmen {
+        background-color: aliceblue;
+        box-shadow: 5px 5px 10px rgb(59 2 2 / 20%);
+      }
+      .caterpillar {
+        background-color: aliceblue;
+        box-shadow: 5px 5px 10px rgb(59 2 2 / 20%);
+      }
+      .flamingo {
+        background-color: aliceblue;
+        box-shadow: 5px 5px 10px rgb(59 2 2 / 20%);
+      }
+      .madhatter {
+        background-color: aliceblue;
+        box-shadow: 5px 5px 10px rgb(59 2 2 / 20%);
+      }
+
+      .white-rabbit:hover {
+        transform: rotateY(360deg);
+        transition: all 1000ms ease-in-out;
+      }
+      .drink-me:hover {
+        transform: scale(1, 2);
+        transition: all 1000ms ease-in;
+      }
+      .cardmen:hover {
+        transform: rotateY(360deg);
+        transition: all 1000ms ease-in-out;
+      }
+      .caterpillar:hover {
+        transform: scale(2, 1);
+        transition: all 1000ms ease-in;
+      }
+
+      .flamingo:hover {
+        transform: rotateY(360deg);
+        transition: all 1000ms ease-in-out;
+      }
+
+      .madhatter:hover {
+        transform: scale(0.5);
+        transition: all 1000ms ease-in;
+      }
+
+      .read-book {
+        background-color: rgb(240, 248, 255, 0.5);
+        font-size: 16px;
+        border: 4px dotted #222259;
+      }
+      .dark .read-book {
+        background-color: (97 10 26 / 35%);
+        border: 4px dotted #f5eff1;
+      }
+      footer {
+        font-size: 14px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rabbit">🐇</div>
+      <button class="theme-button">
+        <em> Follow the white rabbit?</em>
+      </button>
+      <header>
+        <h1>Alice's Adventures in Wonderland</h1>
+        <h2>by Lewis Carroll</h2>
+        <h3>illustrated by John Tenniel</h3>
+        <span class="quote-impossible"
+          ><em
+            >“Alice had begun to think that very few things indeed were really
+            impossible.”</em
+          >
+        </span>
+      </header>
+
+      <img
+        class="cheshire-cat"
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/052/original/cheshirecat.png?1701022839"
+        alt="cheshire cat"
+      />
+
+      <section>
+        <p>
+          Even if you've never read this story or seen one of the countless
+          adaptations, you likely know about the story of Alice and her
+          adventures in Wonderland. The story of a girl following a rabbit down
+          a rabbit-hole, she soon discovers a land where nothing quite makes
+          sense. Here she encounters fascinating new characters, including a
+          talking cat who can disappear and reappear.
+        </p>
+        <div>🐇</div>
+        <p>
+          Was it all a dream? Something else? Does it even matter? In the end, I
+          love this story for what it challenges me to do: to never stop
+          exploring, to question things as I see them, and to always stay
+          curious.
+        </p>
+      </section>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/088/original/WhiteRabbit.png.png?1701045747"
+          alt="white rabbit"
+          class="white-rabbit"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/093/original/Alice_DrinkMe.png.png?1701046038"
+          alt="drink me"
+          class="drink-me"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/090/original/CardMen.png.png?1701045851"
+          alt="cardmen"
+          class="cardmen"
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/089/original/Catterpillar.png.png?1701045844"
+          alt="caterpillar"
+          class="caterpillar"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/092/original/Alice_Flamingo.png.png?1701046033"
+          alt="flamingo"
+          class="flamingo"
+        /><img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/105/091/original/Madhatter.png.png?1701045910"
+          alt="madhatter"
+          class="madhatter"
+        />
+      </div>
+      <section class="read-book">
+        <div>
+          You can read <strong>Alice's Adventures in Wonderland</strong> for
+          free online thanks to
+          <a
+            href="https://www.gutenberg.org/files/11/11-h/11-h.htm"
+            target="_blank"
+            >Project Gutenberg</a
+          >.
+        </div>
+        <div>📖</div>
+        <div>
+          If you prefer to own a physical copy that you can proudly display on
+          your bookshelf, then be sure to check out
+          <a
+            href="https://bookshop.org/p/books/the-alice-in-wonderland-omnibus-including-alice-s-adventures-in-wonderland-and-through-the-looking-glass-with-the-original-john-tenniel-illustrations-/16250701?ean=9781954839199"
+            target="_blank"
+            >Bookshop.org</a
+          >.
+        </div>
+      </section>
+      <footer>
+        This project coded with 💖 by
+        <a href="https://github.com/lindsayjane35" target="_blank"
+          ><strong>Lindsay Land</strong></a
+        >
+        for the
+        <a href="https://www.shecodes.io/" target="_blank">SheCodes</a> Favorite
+        Book Challenge.
+      </footer>
+    </div>
+    <script>
+      function changeTheme() {
+        let themeButton = document.querySelector(".theme-button");
+        let body = document.querySelector("body");
+        let rabbitElement = document.querySelector(".rabbit");
+
+        body.classList.toggle("dark");
+
+        if (themeButton.innerHTML === "Go home?") {
+          themeButton.innerHTML = "Follow the white rabbit?";
+        } else {
+          themeButton.innerHTML = "Go home?";
+        }
+
+        if (rabbitElement.innerHTML === "👑") {
+          rabbitElement.innerHTML = "🐇";
+        } else {
+          rabbitElement.innerHTML = "👑";
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function readQuote() {
+        alert(
+          "“Would you tell me, please, which way I ought to go from here?” “That depends a good deal on where you want to get to,” said the Cat. “I don’t much care where–” said Alice. “Then it doesn’t matter which way you go,” said the Cat. “–so long as I get SOMEWHERE,” Alice added as an explanation. “Oh, you’re sure to do that,” said the Cat, “if you only walk long enough.”"
+        );
+      }
+      let cheshireCat = document.querySelector(".cheshire-cat");
+      cheshireCat.addEventListener("click", readQuote);
+    </script>
+  </body>
+</html>
