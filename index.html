@@ -60,9 +60,12 @@
       }
 
       header {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
         border-radius: 20px;
         padding: 5px 5px 30px 5px;
-        margin: 20px;
+
         background-color: aliceblue;
         box-shadow: 0 0 20px rgb(59 2 2 / 20%);
       }
@@ -183,6 +186,24 @@
       footer {
         font-size: 14px;
         padding: 20px;
+      }
+      @media (max-width: 430px) {
+        h1 {
+          font-size: 28px;
+        }
+        .grid {
+          margin: 0 auto;
+          display: grid;
+          width: 300px;
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 5px;
+        }
+        .theme-button,
+        header,
+        section,
+        .read-book {
+          width: 300px;
+        }
       }
     </style>
   </head>
